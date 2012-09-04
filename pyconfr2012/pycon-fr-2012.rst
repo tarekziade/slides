@@ -43,7 +43,7 @@ Use case Mozilla
 Outils existants
 ================
 
-
+- **Supervisord** -- Python, bien, APIs: XML-RPC, bonne communaute,
   dur a etendre, UI web pas terrible, pas de stdout temps reel.
 
 - **Bluepill** -- Gestion du flapping, DSL pénible, moins mature
