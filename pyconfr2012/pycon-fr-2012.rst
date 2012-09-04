@@ -1,10 +1,10 @@
-.. image:: circus-medium.png
+.. image:: http://blog.ziade.org/slides/pyconfr2012/circus-medium.png
 
 .. class:: center
 
     **Gestionnaire de Processus & Sockets**
 
-    Tarek Ziadé - tarek@ziade.rg - @tarek_ziade
+    Tarek Ziade - tarek@ziade.org - @tarek_ziade
 
 
 ----
@@ -172,7 +172,7 @@ Lancement::
 Architecture de Circus
 ======================
 
-.. image:: circus-architecture.png
+.. image:: http://blog.ziade.org/slides/pyconfr2012/circus-architecture.png
 
 
 ----
@@ -181,7 +181,7 @@ Va mon fils, deploie tes applis
 ===============================
 
 
-.. image:: devops.jpg
+.. image:: http://blog.ziade.org/slides/pyconfr2012/devops.jpg
 
 
 ==> demo \\o/
@@ -194,13 +194,13 @@ Va mon fils, deploie tes applis
 
 **Pb. Stack actuelles** *2 niveaux de gestions de process...*
 
-.. image:: classical-stack.png
+.. image:: http://blog.ziade.org/slides/pyconfr2012/classical-stack.png
 
 ----
 
 **Solution** *En gerant les sockets dans Circus*
 
-.. image:: circus-stack.png
+.. image:: http://blog.ziade.org/slides/pyconfr2012/circus-stack.png
 
 
 ----
