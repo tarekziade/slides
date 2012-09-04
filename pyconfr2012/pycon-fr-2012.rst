@@ -1,3 +1,9 @@
+++++++++++++++++++++++
+Circus - Pycon Fr 2012
+++++++++++++++++++++++
+
+----
+
 .. image:: circus-medium.png
 
 .. class:: center
@@ -10,7 +16,7 @@
 ----
 
 Gestion de processus ?
-======================
+----------------------
 
 - démarrer/stopper des process
 - monitoring / stats
