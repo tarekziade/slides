@@ -1,10 +1,10 @@
-.. image:: ../docs/source/images/circus-medium.png
+.. image:: circus-medium.png
 
 .. class:: center
 
     **Gestionnaire de Processus & Sockets**
 
-    Tarek Ziadé - tarek@ziade.og - @tarek_ziade
+    Tarek Ziadé - tarek@ziade.rg - @tarek_ziade
 
 
 ----
@@ -44,7 +44,6 @@ Outils existants
 ================
 
 
-- **Supervisord** -- Python, bien, APIs: XML-RPC, bonne communaute,
   dur a etendre, UI web pas terrible, pas de stdout temps reel.
 
 - **Bluepill** -- Gestion du flapping, DSL pénible, moins mature
@@ -173,7 +172,7 @@ Lancement::
 Architecture de Circus
 ======================
 
-.. image:: ../docs/source/images/circus-architecture.png
+.. image:: circus-architecture.png
 
 
 ----
@@ -195,13 +194,13 @@ Va mon fils, deploie tes applis
 
 **Pb. Stack actuelles** *2 niveaux de gestions de process...*
 
-.. image:: ../docs/source/images/classical-stack.png
+.. image:: classical-stack.png
 
 ----
 
 **Solution** *En gerant les sockets dans Circus*
 
-.. image:: ../docs/source/images/circus-stack.png
+.. image:: circus-stack.png
 
 
 ----
