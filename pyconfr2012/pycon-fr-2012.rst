@@ -95,7 +95,7 @@ psutil
 - API propre et simple
 
 
-::
+.. code-block:: python
 
    >>> import psutil
    >>> p = psutil.Process(7384)
@@ -143,7 +143,7 @@ Commandes
 Exemple
 =======
 
-::
+.. code-block:: ini
 
     [circus]
     httpd = 1
@@ -230,7 +230,9 @@ http://chaussette.readthedocs.org
 
 ----
 
-Exemple::
+Exemple
+
+.. code-block:: ini
 
     [circus]
     ...
