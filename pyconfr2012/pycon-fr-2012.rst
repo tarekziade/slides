@@ -137,12 +137,6 @@ Commandes
 - **circus-top** - commande top-like
 - **circusctl** - command-line
 
-Lance par **circusd** ou manuellement:
-
-- **circusd-stats** - daemon de stats
-- **circus-plugin** - process plugin
-- **circushttpd** - interface web
-
 ----
 
 
