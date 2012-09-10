@@ -184,7 +184,8 @@ Va mon fils, deploie tes applis
 .. image:: devops.jpg
 
 
-==> demo \\o/
+**DEMO** - http://blog.ziade.org/circus-screencast-1.html
+
 
 ----
 
