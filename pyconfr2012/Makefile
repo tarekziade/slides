@@ -4,5 +4,7 @@ build:
 	bin/pip install landslide
 
 render:
-	bin/landslide config.cfg
+	bin/landslide circus.cfg
+	bin/landslide rpi.cfg
+	bin/landslide marteau.cfg
 
