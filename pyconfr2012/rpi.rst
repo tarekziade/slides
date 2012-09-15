@@ -17,9 +17,49 @@ R-Pi & Arduino - Pycon Fr 2012
 Arduino
 =======
 
-photo
+.. image:: arduino_uno_test.jpg
+
+**plateforme de prototypage open source**
 
 ----
+
+Arduino
+=======
+
+.. image:: arduikit.jpg
+
+----
+
+Arduino
+=======
+
+.. image:: arduixp.jpg
+
+----
+
+Arduino
+=======
+
+.. image:: simple-led.jpg
+
+
+----
+
+Arduino
+=======
+
+.. image:: ardu.jpg
+
+----
+
+Arduino
+=======
+
+.. image:: robot.jpg
+
+
+----
+
 
 Arduino
 =======
@@ -31,14 +71,18 @@ specs techniques   [jon]
 Arduino
 =======
 
-- livres, adafruit etc. cheminement d'un noob  [tarek]
+- livre - Beginning with Arduino
+- adafruit
 
 ----
 
 Arduino
 =======
 
-projet Bagnole RC  [tarek]
+Projet Voiture RC
+
+`Video <https://plus.google.com/photos/106436370949746015255/albums/5765433351974598417/5765433358865484370>`_
+
 
 ----
 
@@ -67,28 +111,29 @@ stm32f4
 Raspberry-PI
 ============
 
-    presentation Raspberry-PI
+.. image:: raspi_blue_white.png
 
 ----
 
 Raspberry-PI
 ============
 
-    specs techniques  [tarek]
+Specs:
+
+- Broadcom BCM2835
+- 700 mhz ARM CPU
+- composite, USB, HDMI, audio out, ethernet
 
 ----
 
-Raspberry-PI
-============
-
-    R-PI et Python [jon]
+**R-PI et Python** [jon]
 
 ----
 
-Raspberry-PI
-============
+Raspberry Jukebox
+=================
 
-    projet JukeBox => http://ziade.org/2012/07/01/a-raspberry-pi-juke-box-how-to/  [tarek]
+.. image:: rpi-jukebox.jpg
 
 ----
 
@@ -106,12 +151,4 @@ Thanks !
 ========
 
 Questions ?
-
-- Docs: http://circus.io
-- IRC: #mozilla-circus sur Freenode
-- ML : http://tech.groups.yahoo.com/group/circus-dev/
-
-
-
-
 
