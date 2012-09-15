@@ -9,7 +9,7 @@ R-Pi & Arduino - Pycon Fr 2012
     **Raspberry Pi & Arduino**
 
     * Tarek Ziade - tarek@ziade.org - @tarek_ziade
-    * Johnatan Schemoul
+    * Johnatan Schemoul - jonathan.schemoul@hackspark.fr - @jon1012
 
 
 ----
@@ -64,7 +64,10 @@ Arduino
 Arduino
 =======
 
-specs techniques   [jon]
+- 16 Mhz
+- 8 bits
+- 32k Flash
+- 2k RAM
 
 ----
 
@@ -90,21 +93,32 @@ stm32f4
 =======
 
 
-    presentation stm32f4    [jon]
+- STM32F4
+- ARM
+- 32 Bits
 
 ----
 
 stm32f4
 =======
 
-    specs techniques
+
+- 168 Mhz
+- 32 Bits
+- STM32F4 Discovery
+- 3xADC, DAC, Accéléromètre
+- Python...
+    
 
 ----
 
 stm32f4
 =======
 
-    pymite | presentation des travaux du samedi
+    Python ?
+        - Atelier hier de 14 à 18h
+        - Codé en Python directement
+        - Avancée sur le DAC, sur un driver lcd en python
 
 ----
 
@@ -126,7 +140,15 @@ Specs:
 
 ----
 
-**R-PI et Python** [jon]
+R-PI et Python
+==============
+
+- Des GPIOs...
+- Avec WiringPi
+    - En C
+    - Simple
+    - Bindings Python
+    
 
 ----
 
