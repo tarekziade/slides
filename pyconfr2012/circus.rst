@@ -6,6 +6,8 @@ Circus - Pycon Fr 2012
 
 .. image:: circus-medium.png
 
+.. image:: diversite.jpg
+
 .. class:: center
 
     **Gestionnaire de Processus & Sockets**
