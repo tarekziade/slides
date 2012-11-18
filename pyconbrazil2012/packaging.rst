@@ -2,20 +2,23 @@
 The State Of Packaging
 ======================
 
+Tarek Ziade - @tarek_ziade - http://ziade.org
+
+----
+
+25,694
+------
+
+----
+
+258,014,251
+------------
+
 ----
 
 vibrant ecosystem.
 ------------------
 
-----
-
-25,694 projects on PyPI
------------------------
-
-----
-
-258,014,251 downloads
----------------------
 
 ----
 
@@ -27,11 +30,43 @@ messy. frustrating. confusing.
 
 ----
 
-.. image:: history-part1.png
+.. image:: history-1.png
 
 ----
 
-.. image:: history-part2.png
+.. image:: history-2.png
+
+----
+
+.. image:: history-3.png
+
+----
+
+.. image:: history-4.png
+
+----
+
+.. image:: history-5.png
+
+----
+
+Packaging removed from Py3
+--------------------------
+
+.. image:: thumbs_down.gif
+
+----
+
+
+ah. well.
+---------
+
+
+.. image:: facepalm.gif
+
+----
+
+.. image:: history-6.png
 
 ----
 
@@ -79,39 +114,8 @@ PEP 381 - PyPI Mirrors
 
 ----
 
-Distutils2 => Packaging
------------------------
-
-**stdlib here we come...**
-
-----
-
-Packaging removed from Py3
---------------------------
-
-.. image:: thumbs_down.gif
-
-----
-
-distlib - just the standards
-----------------------------
-
-----
-
-Crate.io - the next pypi.python.org ?
--------------------------------------
-
-----
-
-Wheel - The next binary distribution
-------------------------------------
-
-----
-
 What's next ?
 -------------
-
-----
 
 **I dont' know...**
 
@@ -141,8 +145,8 @@ Tip #2 -- setup.py should be as dumb and simple as possible
 
 ----
 
-Tip #3 -- Do not make any assumption on the used installer
-----------------------------------------------------------
+Tip #3 -- Do not make any assumption on the installer that'll be used
+---------------------------------------------------------------------
 
 ----
 
@@ -162,8 +166,8 @@ Tip #5 -- Be cautious about your data files
 
 ----
 
-Tip #6 -- Use Pip.
-------------------
+Tip #6 -- Use Pip,  but the OS packaging system prevails.
+---------------------------------------------------------
 
 ----
 
