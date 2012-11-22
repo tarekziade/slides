@@ -1,6 +1,6 @@
-+++++++++++++++++++++++++++
-Circus - Pycon Ireland 2012
-+++++++++++++++++++++++++++
+++++++++++++++++++++++++++
+Circus - Pycon Brazil 2012
+++++++++++++++++++++++++++
 
 ----
 
@@ -192,7 +192,9 @@ Go son, deploye yer apps
 
 ----
 
-**Mozilla use Case #2 - Manage full web stacks**
+Mozilla Use Case #2 - Manage full web stacks
+--------------------------------------------
+
 
 ----
 
@@ -292,7 +294,4 @@ Questions ?
 - IRC: #mozilla-circus on Freenode
 - ML : http://tech.groups.yahoo.com/group/circus-dev
 - Code: https://github.com/mozilla-services/circus
-
-
-
 
