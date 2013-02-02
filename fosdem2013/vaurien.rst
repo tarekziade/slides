@@ -95,56 +95,92 @@ Manual testing is not an option
 Vaurien
 -------
 
-1. proxy between your application & backend
-2. simulates failures
-3. design: protocols & behaviors
-4. many built-in protocols & behaviors
-5. test-driven or command-line driven
-6. pluggable!
+
+.. image:: design.png
 
 ----
 
-Proxy
------
+Protocol & behaviors
+--------------------
 
-XXX
+.. image:: protocol.png
+
 
 ----
 
-Simulates failures
--------------------
+Built-in protocols & behaviors
+------------------------------
 
-XXX
 
-----
+- protocols: http, memcache, mysql, redis, smtp, generic tcp
+- behaviors: blackout, delay, dummy, error, hang
 
-Design
-------
-
-XXX
+Create your own.
 
 ----
 
+Command line
+------------
 
-Built-in
---------
 
-* protocols: tcp, xxx
-* behaviors: xxxx
+An SSL SMTP proxy with a 5% error rate and 10% delays
+
+.. code-block:: bash
+
+   $ pip install vaurien
+   $ vaurien --proxy 0.0.0.0:6565 --backend mail.example.com:465 \
+             --protocol smtp --behavior 5:error,10:delay
+
+
+MySQL with 5% hangs :)
+
+.. code-block:: bash
+
+   $ vaurien --proxy 0.0.0.0:3307 --backend localhost:3306
+             --protocol mysql --behavior 5:hang
+
 
 ----
 
-Vaurien & Marketplace
-----------------------
+Unit tests
+----------
 
-XXX
+.. code-block:: python
 
-See https://blog.mozilla.org/webdev/2013/01/18/load-testing-the-marketplace/
+    import unittest
+    from vaurien import Client, start_proxy, stop_proxy
+
+
+    class MyTest(unittest.TestCase):
+
+        def setUp(self):
+            self.proxy_pid = start_proxy(port=8080)
+
+        def tearDown(self):
+            stop_proxy(self.proxy_pid)
+
+        def test_one(self):
+            client = Client()
+            options = {'inject': True}
+
+            with client.with_behavior('error', \**options):
+                # do something...
+                pass
+
+            # we're back to normal here
+
+
+----
+
+Used for Firefox Marketplace
+----------------------------
+
+Read http://tinyurl.com/marketplace-test
 
 ----
 
 Thanks !
-========
+--------
 
 Questions ?
 
