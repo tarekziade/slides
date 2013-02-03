@@ -139,6 +139,29 @@ MySQL with 5% hangs :)
    $ vaurien --proxy 0.0.0.0:3307 --backend localhost:3306
              --protocol mysql --behavior 5:hang
 
+----
+
+Config file
+-----------
+
+.. code-block:: ini
+
+    [vaurien]
+    backend = google.com:80
+    proxy = localhost:8000
+    protocol = http
+    behavior = 20:delay
+
+    [behavior:delay]
+    sleep = 2
+
+
+And then:
+
+.. code-block:: bash
+
+   $ vaurien --config vaurien.ini
+
 
 ----
 
@@ -169,6 +192,50 @@ Unit tests
 
             # we're back to normal here
 
+
+----
+
+Writing a behavior
+------------------
+
+
+A simple class:
+
+.. code-block:: python
+
+    from vaurien.behaviors.dummy import Dummy
+    import time
+
+    class Delay(Dummy):
+        name = 'delay'
+        options = {'sleep': ("Delay in seconds", int, 1)}
+        options.update(Dummy.options)
+
+        def on_before_handle(self, protocol, source, dest, to_backend):
+            time.sleep(self.option('sleep'))
+            return True
+
+        def on_after_handle(self, protocol, source, dest, to_backend):
+            pass
+
+----
+
+Writing a protocol
+------------------
+
+.. code-block:: python
+
+    from vaurien.protocols.base import BaseProtocol
+
+
+    class MinitelProtocol(TCP):
+        name = 'minitel'
+
+        def _handle(self, source, dest, to_backend):
+            # source = source socket
+            # dest = destination socket
+            # to_backend = direction
+            ... implement a protocol ...
 
 ----
 
