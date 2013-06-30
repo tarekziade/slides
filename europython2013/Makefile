@@ -5,3 +5,4 @@ build:
 
 render:
 	bin/landslide vaurien.cfg
+	bin/landslide circus.cfg
