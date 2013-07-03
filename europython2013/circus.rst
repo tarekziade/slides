@@ -15,11 +15,6 @@ Circus - Europython '13
 
 ----
 
-About the name
-==============
-
-----
-
 Typical deployment
 ==================
 
