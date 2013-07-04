@@ -109,7 +109,7 @@ Manual testing is tedious
 Vaurien
 -------
 
-**TCP failures simulation framework**
+**TCP failures simulation tool**
 
 ----
 
@@ -207,7 +207,7 @@ Unit tests
             client = Client()
             options = {'inject': True}
 
-            with client.with_behavior('error', \**options):
+            with client.with_behavior('error', \\**options):
                 # do something...
                 pass
 
