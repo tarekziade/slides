@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Loads v2</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>Loads v2</h1>
+          <h3>Where we're heading</h3>
+          <p>
+            <small>Tarek Ziadé</small>
+          </p>
+        </section>
+
+        <section>
+          <h2>Loads v1</h2>
+          <ul>
+            <li>Being used for +1 year</li>
+            <li>"good enough" for most load tests</li>
+            <li>Can test HTTP APIs and Web Sockets</li>
+            <li><a href="https://loads.services.mozilla.com">https://loads.services.mozilla.com</a> is the dashboard</li>
+            <li>Used for most of our web services</li>
+          </ul>
+         </section>
+
+        <section>
+          <h2>Limitations</h2>
+          <ul>
+            <li>Day-long runs don't really work</li>
+            <li>Crappy dashboard</li>
+            <li>No direct link to Logs/CPU/Mem usage of stressed servers</li>
+            <li>No automatic slaves deployment yet</li>
+            <li>Python client only really supported</li>
+            <li>High bar to implement clients in Haskell/Go</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Current architecture</h2>
+          <img src="http://ziade.org/loadsv1.jpg"/>
+        </section>
+
+        <section>
+          <h2>Loads v2</h2>
+          <ul>
+            <li>Simplified architecture</li>
+            <li>Day-long runs: no problem</li>
+            <li>Easy to implement new clients</li>
+            <li>The coding is happening now</li>
+            <li>New org : <a href="https://github.com/loads">https://github.com/loads</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Target architecture</h2>
+          <img src="http://ziade.org/loads.jpg"/>
+        </section>
+
+        <section>
+          <h2>Who's doing what ?</h2>
+          <ul>
+            <li>James leads the reporting/dashboard work</li>
+            <li>Tarek leads Loadsv2 core refactoring</li>
+            <li>Ben leads simple push integration (==Go or Haskell client)</li>
+            <li>XXX leads AWS automation</li>
+          </ul>
+        </section>
+        <section>
+          <h1>THE END</h1>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
