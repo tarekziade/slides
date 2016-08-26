@@ -59,10 +59,11 @@ Web Sites
 
 Why Python ?
 
-1. Django (as a PHP replacer)
+1. Django (as a PHP replacer*)
 2. Django (community, ecosystem <3)
 3. Django (because Python)
 
+\*in 2009
 
 ----
 
@@ -201,6 +202,19 @@ Developer tools
 
 .. image:: system.png
 
+----
+
+Rust
+----
+
+- Faster execution ++
+- So much nicer to write than C
+  - no memory allocation mess
+  - single mutator
+- Ecosystem starting to emerge
+- Cargo ++
+- Shipping binaries is nice
+- Easy to use from Python (cffi)
 
 ----
 
@@ -208,8 +222,8 @@ Conclusion
 ----------
 
 - The Node.js revolution did not really happen.
-- Python has a grat future at Mozilla
-- Rust is coming  <3
+- Python has a great future at Mozilla
+- Rust is coming <3
 
 
 ----
@@ -226,6 +240,7 @@ Mozilla Language Forecast
 Itu sahaja.
 
 ----
+
 
 .. image:: wordcloud.png
 
