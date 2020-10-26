@@ -119,7 +119,7 @@ Run it
     SUCCESSES: 1 | FAILURES: 0  | WORKERS: 1
     *** Bye ***
 
-    # 150 concurrent requests
+    # 150 concurrent workers
     $ molotov -w 150 --duration 60 script.py
     **** Molotov v2.0. Happy breaking! ****
     Preparing 150 workers...OK
@@ -285,6 +285,7 @@ Conclusion
 - Easy to use locally
 - Easy to integrate into any CI/CD
 
+Full doc: https://molotov.readthedocs.io/en/stable/
 
 Thanks! Questions?
 
