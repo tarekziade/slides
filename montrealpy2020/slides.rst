@@ -12,7 +12,7 @@ Molotov - Load testing webservices
 Mozilla QA requirements
 -----------------------
 
-- A tool to stress webservices
+- A tool to stress webservices (no UI, plain HTTP)
 - Easy to deploy and run in our CI/CD
 - Low entry barrier
 
