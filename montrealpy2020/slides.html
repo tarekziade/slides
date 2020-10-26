@@ -125,29 +125,9 @@ code {
 
     </style>
     <style type="text/css" media="screen, projection">
-      h1, h2, h3, h4, h5, h6, p, ul, li {
-    font-family: sans-serif !important;
-}
-
-p, ul, li {
-    color: #555753 !important;
-    font-size: 120% !important;
-}
-
-header h1, header h2, header h3, header h4, header h5, header h6 {
-    color: #204a87 !important;
-    font-weight: bold !important;
-}
-
-section h1, section h2, section h3, section h4, section h5, section h6 {
-    color: #3465a4 !important;
-}
-
-img { display: block; margin: auto; }
-
-body {
+      body {
   font: 14px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
-  background: #555753;
+  background: #fff;
   padding: 0;
   margin: 0;
   overflow: hidden;
@@ -159,9 +139,7 @@ div.presentation {
   display: table-cell;
   vertical-align: middle;
   height: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(#2e3436), to(#555753));
-  background-color: #555753;
-  background: -moz-linear-gradient(bottom, #555753, #2e3436);
+  background: inherit;
 }
 
 div.slides, body.expose div.slides.nocontext {
@@ -171,7 +149,9 @@ div.slides, body.expose div.slides.nocontext {
   top: 0;
   position: absolute;
   display: block;
+  background-color: #fff;
 }
+
 
 div.slides.nocontext {
   width: 900px;
@@ -183,7 +163,6 @@ div.slides.nocontext {
 }
 
 div.slide {
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA4QAAAAICAIAAAAutqZSAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAXDAAAFwwBigKOZgAAAAd0SU1FB9oMBhYcN9mLAKQAAAB1SURBVHja7dahDYNQAEXRUkGYgB0YqCgEG6CRXaAGh/5Jk6paJCv8iVjhCeQ5I1x1m/Ig9dtbEUL1/xYhVMZVhFA3a5D61l6E0Ll9RAgdyyRC6PkaREhbSQAAgBkFAMCMAgCAGQUAwIwCAIAZBQDAjAIAwF0uR8ALUUwQdKwAAAAASUVORK5CYII=') bottom center no-repeat;
   display: none;
   position: absolute;
   overflow: hidden;
@@ -192,22 +171,25 @@ div.slide {
   left: 50%;
   top: 50%;
   margin-top: -350px;
-  background-color: #fff;
+  background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(#eeeeec));
+  background-color: #eee;
+  background: -moz-linear-gradient(bottom, #fff, #eeeeec);
   -webkit-transition: margin 0.25s ease-in-out;
   -moz-transition: margin 0.25s ease-in-out;
   -o-transition: margin 0.25s ease-in-out;
-  border-top-left-radius: 20px;
-  -moz-border-radius-topleft: 20px;
-  -webkit-border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   -moz-border-radius-topright: 20px;
   -webkit-border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  -moz-border-radius-bottomright: 20px;
-  -webkit-border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  -moz-border-radius-bottomleft: 20px;
-  -webkit-border-bottom-left-radius: 20px;
+  border-bottom-left-radius: 0px;
+  -moz-border-radius-bottomleft: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  border-top-left-radius: 20px;
+  -moz-border-radius-topleft: 20px;
+  -webkit-border-top-left-radius: 20px;
+  border-bottom-right-radius: 0px;
+  -moz-border-radius-bottomright: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+
 }
 
 div.slide p {
@@ -339,7 +321,7 @@ pre, .gist .gist-file .gist-data {
 }
 
 blockquote {
-  border-left: solid 8px #555753;
+  border-left: solid 8px #FFF;
   padding: .1ex 1ex;
   font-style: italic;
   font-size: 20px;
@@ -462,6 +444,8 @@ aside {
     font-size: 90%;
 }
 
+img { display: block; margin: auto; }
+
 /* Expose */
 
 body.expose div.slides {
@@ -487,6 +471,9 @@ body.expose div.slide {
   -webkit-transform-origin: 0 0;
   -o-transform: scale(.33, .33);
   -o-transform-origin: 0 0;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
   cursor: pointer;
 }
 
@@ -1351,8 +1338,6 @@ p.center {
             <header><h1>Molotov - Load testing webservices</h1></header>
             
             
-            <section><p class="center">Tarek Ziade - <a class="reference external" href="mailto:tarek&#64;ziade.org">tarek&#64;ziade.org</a></p></section>
-            
           </div>
           <div class="presenter_notes">
             <header><h1>Presenter Notes</h1></header>
@@ -1378,11 +1363,10 @@ p.center {
         <div class="slide slide-3">
           <div class="inner">
             
-            <header><h1>Why ?</h1></header>
+            <header><h2>Mozilla QA requirements</h2></header>
             
             
-            <section><p>Mozilla QA requirements:</p>
-<ul class="simple">
+            <section><ul class="simple">
 <li>A tool to stress webservices</li>
 <li>Easy to deploy and run in our CI/CD</li>
 <li>Low entry barrier</li>
@@ -1413,7 +1397,7 @@ p.center {
         <div class="slide slide-4">
           <div class="inner">
             
-            <header><h1>Existing tools</h1></header>
+            <header><h2>Existing tools</h2></header>
             
             
             <section><ul class="simple">
@@ -1421,10 +1405,7 @@ p.center {
 <li>Boom!</li>
 <li>Apache JMeter (Java + XML)</li>
 <li>Locust (gevent)</li>
-<li><ul class="first">
-<li>many more</li>
-</ul>
-</li>
+<li>...many more</li>
 </ul></section>
             
           </div>
@@ -1452,11 +1433,10 @@ p.center {
         <div class="slide slide-5">
           <div class="inner">
             
-            <header><h1>Previous failed attempt</h1></header>
+            <header><h2>Previous failed attempt</h2></header>
             
             
-            <section><p>I wrote <strong>Loads</strong></p>
-<p>What I've learned</p>
+            <section><p>What I've learned from writing <strong>Loads</strong>:</p>
 <ul class="simple">
 <li>client-side metrics are too noisy</li>
 <li>distributed systems are hard, rely on existing infra</li>
@@ -1489,7 +1469,7 @@ p.center {
         <div class="slide slide-6">
           <div class="inner">
             
-            <header><h1>Molotov design principles</h1></header>
+            <header><h2>Molotov design principles</h2></header>
             
             
             <section><ul class="simple">
@@ -1524,7 +1504,7 @@ p.center {
         <div class="slide slide-7">
           <div class="inner">
             
-            <header><h1>Hello World</h1></header>
+            <header><h2>Hello World</h2></header>
             
             
             <section><p><strong>Simplest scenario</strong></p>
@@ -1565,7 +1545,7 @@ p.center {
         <div class="slide slide-8">
           <div class="inner">
             
-            <header><h1>2 scenarios</h1></header>
+            <header><h2>2 scenarios</h2></header>
             
             
             <section><p><strong>90% of reads, 10% of writes</strong></p>
@@ -1612,7 +1592,7 @@ p.center {
         <div class="slide slide-9">
           <div class="inner">
             
-            <header><h1>Run it</h1></header>
+            <header><h2>Run it</h2></header>
             
             
             <section><pre><span></span><span class="c1"># single run</span>
@@ -1673,7 +1653,7 @@ SUCCESSES: <span class="m">110</span> <span class="p">|</span> FAILURES: <span c
         <div class="slide slide-10">
           <div class="inner">
             
-            <header><h1>Advanced usage : sizing</h1></header>
+            <header><h2>Advanced usage : sizing</h2></header>
             
             
             <section><p>Ramp up until an error rate is reached.</p>
@@ -1717,7 +1697,7 @@ LAST MINUTE: SUCCESSES: <span class="m">453</span> <span class="p">|</span> FAIL
         <div class="slide slide-11">
           <div class="inner">
             
-            <header><h1>Automation with Moloslave 1/2</h1></header>
+            <header><h2>Automation with Moloslave 1/2</h2></header>
             
             
             <section><p><strong>Automating runs from github</strong></p>
@@ -1755,7 +1735,7 @@ LAST MINUTE: SUCCESSES: <span class="m">453</span> <span class="p">|</span> FAIL
         <div class="slide slide-12">
           <div class="inner">
             
-            <header><h1>Automation with Moloslave 2/2</h1></header>
+            <header><h2>Automation with Moloslave 2/2</h2></header>
             
             
             <section><p>molotov.json example:</p>
@@ -1812,7 +1792,7 @@ LAST MINUTE: SUCCESSES: <span class="m">453</span> <span class="p">|</span> FAIL
         <div class="slide slide-13">
           <div class="inner">
             
-            <header><h1>Docker</h1></header>
+            <header><h2>Docker</h2></header>
             
             
             <section><ul class="simple">
@@ -1858,7 +1838,7 @@ $ docker run -i --rm \
         <div class="slide slide-14">
           <div class="inner">
             
-            <header><h1>Advanced scripting : Events</h1></header>
+            <header><h2>Advanced scripting : Events</h2></header>
             
             
             <section><pre><span></span><span class="kn">import</span> <span class="nn">molotov</span>
@@ -1906,7 +1886,7 @@ $ docker run -i --rm \
         <div class="slide slide-15">
           <div class="inner">
             
-            <header><h1>Conclusion</h1></header>
+            <header><h2>Conclusion</h2></header>
             
             
             <section><ul class="simple">
@@ -1916,6 +1896,7 @@ $ docker run -i --rm \
 <li>Easy to integrate into any CI/CD</li>
 </ul>
 <p>Full doc: <a class="reference external" href="https://molotov.readthedocs.io/en/stable/">https://molotov.readthedocs.io/en/stable/</a></p>
+<p><a class="reference external" href="mailto:tarek&#64;ziade.org">tarek&#64;ziade.org</a></p>
 <p>Thanks! Questions?</p></section>
             
           </div>
@@ -1957,83 +1938,72 @@ $ docker run -i --rm \
         <td><a href="#slide2">2</a></td>
       </tr>
       
-      
-      <tr id="toc-row-3">
-        <th><a href="#slide3">Why ?</a></th>
-        <td><a href="#slide3">3</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-4">
-        <th><a href="#slide4">Existing tools</a></th>
-        <td><a href="#slide4">4</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-5">
-        <th><a href="#slide5">Previous failed attempt</a></th>
-        <td><a href="#slide5">5</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-6">
-        <th><a href="#slide6">Molotov design principles</a></th>
-        <td><a href="#slide6">6</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-7">
-        <th><a href="#slide7">Hello World</a></th>
-        <td><a href="#slide7">7</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-8">
-        <th><a href="#slide8">2 scenarios</a></th>
-        <td><a href="#slide8">8</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-9">
-        <th><a href="#slide9">Run it</a></th>
-        <td><a href="#slide9">9</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-10">
-        <th><a href="#slide10">Advanced usage : sizing</a></th>
-        <td><a href="#slide10">10</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-11">
-        <th><a href="#slide11">Automation with Moloslave 1/2</a></th>
-        <td><a href="#slide11">11</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-12">
-        <th><a href="#slide12">Automation with Moloslave 2/2</a></th>
-        <td><a href="#slide12">12</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-13">
-        <th><a href="#slide13">Docker</a></th>
-        <td><a href="#slide13">13</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-14">
-        <th><a href="#slide14">Advanced scripting : Events</a></th>
-        <td><a href="#slide14">14</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-15">
-        <th><a href="#slide15">Conclusion</a></th>
-        <td><a href="#slide15">15</a></td>
-      </tr>
+        
+        <tr id="toc-row-3" class="sub">
+          <th><a href="#slide3">Mozilla QA requirements</a></th>
+          <td><a href="#slide3">3</a></td>
+        </tr>
+        
+        <tr id="toc-row-4" class="sub">
+          <th><a href="#slide4">Existing tools</a></th>
+          <td><a href="#slide4">4</a></td>
+        </tr>
+        
+        <tr id="toc-row-5" class="sub">
+          <th><a href="#slide5">Previous failed attempt</a></th>
+          <td><a href="#slide5">5</a></td>
+        </tr>
+        
+        <tr id="toc-row-6" class="sub">
+          <th><a href="#slide6">Molotov design principles</a></th>
+          <td><a href="#slide6">6</a></td>
+        </tr>
+        
+        <tr id="toc-row-7" class="sub">
+          <th><a href="#slide7">Hello World</a></th>
+          <td><a href="#slide7">7</a></td>
+        </tr>
+        
+        <tr id="toc-row-8" class="sub">
+          <th><a href="#slide8">2 scenarios</a></th>
+          <td><a href="#slide8">8</a></td>
+        </tr>
+        
+        <tr id="toc-row-9" class="sub">
+          <th><a href="#slide9">Run it</a></th>
+          <td><a href="#slide9">9</a></td>
+        </tr>
+        
+        <tr id="toc-row-10" class="sub">
+          <th><a href="#slide10">Advanced usage : sizing</a></th>
+          <td><a href="#slide10">10</a></td>
+        </tr>
+        
+        <tr id="toc-row-11" class="sub">
+          <th><a href="#slide11">Automation with Moloslave 1/2</a></th>
+          <td><a href="#slide11">11</a></td>
+        </tr>
+        
+        <tr id="toc-row-12" class="sub">
+          <th><a href="#slide12">Automation with Moloslave 2/2</a></th>
+          <td><a href="#slide12">12</a></td>
+        </tr>
+        
+        <tr id="toc-row-13" class="sub">
+          <th><a href="#slide13">Docker</a></th>
+          <td><a href="#slide13">13</a></td>
+        </tr>
+        
+        <tr id="toc-row-14" class="sub">
+          <th><a href="#slide14">Advanced scripting : Events</a></th>
+          <td><a href="#slide14">14</a></td>
+        </tr>
+        
+        <tr id="toc-row-15" class="sub">
+          <th><a href="#slide15">Conclusion</a></th>
+          <td><a href="#slide15">15</a></td>
+        </tr>
+        
       
       
     </table>

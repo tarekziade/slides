@@ -4,18 +4,13 @@ Montreal Python
 ----
 
 Molotov - Load testing webservices
-----------------------------------
-
-.. class:: center
-
-    Tarek Ziade - tarek@ziade.org
+==================================
 
 ----
 
-Why ?
------
 
-Mozilla QA requirements:
+Mozilla QA requirements
+-----------------------
 
 - A tool to stress webservices
 - Easy to deploy and run in our CI/CD
@@ -31,16 +26,14 @@ Existing tools
 - Boom!
 - Apache JMeter (Java + XML)
 - Locust (gevent)
-- + many more
+- ...many more
 
 ----
 
 Previous failed attempt
 -----------------------
 
-I wrote **Loads**
-
-What I've learned
+What I've learned from writing **Loads**:
 
 - client-side metrics are too noisy
 - distributed systems are hard, rely on existing infra
@@ -286,6 +279,8 @@ Conclusion
 - Easy to integrate into any CI/CD
 
 Full doc: https://molotov.readthedocs.io/en/stable/
+
+tarek@ziade.org
 
 Thanks! Questions?
 
